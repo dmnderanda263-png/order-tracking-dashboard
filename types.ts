@@ -1,7 +1,6 @@
-// FIX: Import React to make its types available in this module.
 import type * as React from 'react';
 
-export type ParcelStatus = 'Pending to Deliver' | 'Delivered' | 'Payment Received' | 'Returned' | 'Rescheduled';
+export type ParcelStatus = 'Pending to Deliver' | 'Delivered' | 'Payment Received' | 'Returned' | 'Rescheduled' | 'Return Complete';
 
 export interface Parcel {
   id: number;

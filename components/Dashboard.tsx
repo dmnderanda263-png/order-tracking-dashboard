@@ -23,6 +23,8 @@ const Dashboard: React.FC<DashboardProps> = ({ cardData, setCurrentPage }) => {
             onClickHandler = () => setCurrentPage('returned-parcels');
           } else if (card.title === 'Reschedule Parcels') {
             onClickHandler = () => setCurrentPage('rescheduled-parcels');
+          } else if (card.title === 'Return Handover Complete') {
+            onClickHandler = () => setCurrentPage('return-handover-complete');
           } else if (card.title === 'Parcel Tracking') {
             onClickHandler = () => setCurrentPage('parcel-tracking');
           } else if (card.title === 'Bulk Tracking') {

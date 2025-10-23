@@ -26,6 +26,7 @@ const StatusBadge: React.FC<{ status: ParcelStatus }> = ({ status }) => {
     'Payment Received': 'bg-blue-100 text-blue-800',
     'Returned': 'bg-red-100 text-red-800',
     'Rescheduled': 'bg-purple-100 text-purple-800',
+    'Return Complete': 'bg-gray-100 text-gray-800',
   };
   return (
     <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${statusClasses[status]}`}>
@@ -145,7 +146,7 @@ const AllParcels: React.FC<AllParcelsProps> = ({ parcels, title, onUpdateStatus,
 
 
   const getActionOptions = (status: ParcelStatus): ParcelStatus[] => {
-    const allStatuses: ParcelStatus[] = ['Pending to Deliver', 'Delivered', 'Payment Received', 'Returned', 'Rescheduled'];
+    const allStatuses: ParcelStatus[] = ['Pending to Deliver', 'Delivered', 'Payment Received', 'Returned', 'Rescheduled', 'Return Complete'];
     return allStatuses.filter(s => s !== status);
   };
 
@@ -453,6 +454,7 @@ const AllParcels: React.FC<AllParcelsProps> = ({ parcels, title, onUpdateStatus,
                 <option value="Payment Received">Payment Received</option>
                 <option value="Returned">Returned</option>
                 <option value="Rescheduled">Rescheduled</option>
+                <option value="Return Complete">Return Complete</option>
               </select>
             </div>
              <div className="lg:col-span-1">
@@ -513,6 +515,7 @@ const AllParcels: React.FC<AllParcelsProps> = ({ parcels, title, onUpdateStatus,
                     <option value="Payment Received">Payment Received</option>
                     <option value="Returned">Returned</option>
                     <option value="Rescheduled">Rescheduled</option>
+                    <option value="Return Complete">Return Complete</option>
                 </select>
                 <button
                     onClick={handleApplyBulkAction}

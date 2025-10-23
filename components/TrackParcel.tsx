@@ -11,8 +11,8 @@ const StatusBadge: React.FC<{ status: ParcelStatus }> = ({ status }) => {
       'Delivered': 'bg-green-100 text-green-800',
       'Payment Received': 'bg-blue-100 text-blue-800',
       'Returned': 'bg-red-100 text-red-800',
-      // FIX: Added missing 'Rescheduled' status to match the ParcelStatus type.
       'Rescheduled': 'bg-purple-100 text-purple-800',
+      'Return Complete': 'bg-gray-100 text-gray-800',
     };
     return (
       <span className={`px-3 py-1 inline-flex text-sm leading-5 font-semibold rounded-full ${statusClasses[status]}`}>
