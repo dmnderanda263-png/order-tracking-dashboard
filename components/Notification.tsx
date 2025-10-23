@@ -65,22 +65,6 @@ const Notification: React.FC<NotificationProps> = ({ message, type, onClose }) =
           </div>
         </div>
       </div>
-       {/* FIX: Remove non-standard 'jsx' prop from <style> tag. Standard React does not support styled-jsx, and this was causing a type error. */}
-       <style>{`
-        @keyframes fade-in-down {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .animate-fade-in-down {
-            animation: fade-in-down 0.5s ease-out forwards;
-        }
-      `}</style>
     </div>
   );
 };
