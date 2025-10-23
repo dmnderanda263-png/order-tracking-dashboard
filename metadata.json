@@ -1,0 +1,5 @@
+{
+  "name": "Order Tracking Dashboard",
+  "description": "A modern, responsive dashboard for tracking online business orders and parcels. It features a clear sidebar for navigation and a grid of cards summarizing key metrics.",
+  "requestFramePermissions": []
+}
