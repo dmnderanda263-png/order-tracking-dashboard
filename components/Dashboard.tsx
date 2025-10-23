@@ -24,7 +24,7 @@ const Dashboard: React.FC<DashboardProps> = ({ cardData, setCurrentPage }) => {
           } else if (card.title === 'Reschedule Parcels') {
             onClickHandler = () => setCurrentPage('rescheduled-parcels');
           } else if (card.title === 'Parcel Tracking') {
-            onClickHandler = () => window.open('https://bepost.lk/p/Search/', '_blank');
+            onClickHandler = () => setCurrentPage('parcel-tracking');
           } else if (card.title === 'Bulk Tracking') {
             onClickHandler = () => window.open('https://bepost.lk/p/Search/New_serch_barcode.php', '_blank');
           }

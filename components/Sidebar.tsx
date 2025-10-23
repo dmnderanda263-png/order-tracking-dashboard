@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavItemType } from '../types';
 import { 
     DashboardIcon, ClockRewindIcon, CashIcon, UserCircleIcon, ChevronRightIcon, PackageIcon, 
-    ChevronDownIcon, PlusCircleIcon, DocumentReportIcon, ChartBarIcon, LogoutIcon, UploadIcon, DatabaseIcon
+    ChevronDownIcon, PlusCircleIcon, DocumentReportIcon, ChartBarIcon, LogoutIcon, UploadIcon, DatabaseIcon, DocumentSearchIcon
 } from './Icons';
 
 interface SidebarProps {
@@ -43,6 +43,7 @@ const navItems: NavItemType[] = [
       { id: 'financial-overview', icon: <CashIcon className="h-5 w-5" />, label: 'Financial Overview' }
     ]
   },
+  { id: 'parcel-tracking', icon: <DocumentSearchIcon />, label: 'Parcel Tracking' },
   { id: 'admin-profile', icon: <UserCircleIcon />, label: 'Admin Profile' },
   { id: 'data-management', icon: <DatabaseIcon />, label: 'Data Management' },
   { id: 'return-management', icon: <ClockRewindIcon />, label: 'Return Management' },

@@ -12,6 +12,7 @@ import AdminProfile from './components/AdminProfile';
 import ImportParcels from './components/ImportParcels';
 import DataManagement from './components/DataManagement';
 import Notification from './components/Notification';
+import TrackParcel from './components/TrackParcel';
 import { DashboardCardProps, Parcel, ParcelStatus, AdminData, NotificationMessage, AppBackup } from './types';
 import {
   AllParcelsIcon, RescheduleParcelsIcon, DeliveredParcelsIcon, RearrangeParcelsIcon, 
@@ -299,6 +300,8 @@ const App: React.FC = () => {
         return <DataAnalytics parcels={parcels} analysisType="volume" />;
       case 'financial-overview':
         return <DataAnalytics parcels={parcels} analysisType="finance" />;
+      case 'parcel-tracking':
+        return <TrackParcel parcels={parcels} />;
       case 'admin-profile':
         return <AdminProfile 
                   adminData={adminData} 
