@@ -245,7 +245,7 @@ export const RescheduleParcelsIcon = () => (
         <rect x="8" y="12" width="24" height="24" rx="2" fill="#A56A43"/>
         <path d="M40 24C40 29.5228 35.5228 34 30 34C24.4772 34 20 29.5228 20 24C20 18.4772 24.4772 14 30 14" stroke="#34D399" strokeWidth="3" strokeLinecap="round"/>
         <path d="M26 10L20 14L24 20" stroke="#34D399" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-    </g>
+    </svg>
 );
 export const DateChangedIcon = () => (
     <svg {...iconProps} xmlns="http://www.w3.org/2000/svg">
