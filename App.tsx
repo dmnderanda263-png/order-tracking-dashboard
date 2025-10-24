@@ -47,6 +47,9 @@ const App: React.FC = () => {
   });
   const [isAuthenticated, setIsAuthenticated] = useLocalStorage<boolean>('isAuthenticated', false);
 
+  const [githubToken, setGithubToken] = useLocalStorage<string>('githubToken', '');
+  const [gistId, setGistId] = useLocalStorage<string>('gistId', '');
+
   const showNotification = (message: string, type: 'success' | 'error' | 'warning', duration: number = 4000) => {
     setNotification({ message, type });
     setTimeout(() => {
@@ -320,7 +323,17 @@ const App: React.FC = () => {
                   onUpdateAdminName={handleUpdateAdminName} 
                />;
       case 'data-management':
-        return <DataManagement onExport={handleExportBackup} onImport={handleImportBackup} />;
+        return <DataManagement 
+                  onExport={handleExportBackup} 
+                  onImport={handleImportBackup} 
+                  parcels={parcels}
+                  adminData={adminData}
+                  githubToken={githubToken}
+                  setGithubToken={setGithubToken}
+                  gistId={gistId}
+                  setGistId={setGistId}
+                  showNotification={showNotification}
+               />;
       default:
         return <Dashboard cardData={cardData} setCurrentPage={setCurrentPage} />;
     }

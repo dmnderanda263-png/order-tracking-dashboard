@@ -1,7 +1,7 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import PublicTrackingPage from './components/PublicTrackingPage';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -9,6 +9,12 @@ if (!rootElement) {
 }
 
 const root = ReactDOM.createRoot(rootElement);
-root.render(
-  <App />
-);
+
+const path = window.location.pathname;
+
+// Simple router to show the public tracking page or the admin dashboard
+if (path.toLowerCase() === '/track') {
+  root.render(<PublicTrackingPage />);
+} else {
+  root.render(<App />);
+}

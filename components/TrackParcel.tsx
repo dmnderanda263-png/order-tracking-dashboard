@@ -35,7 +35,12 @@ const TrackParcel: React.FC<TrackParcelProps> = ({ parcels }) => {
 
   return (
     <div className="p-8">
-      <h1 className="text-2xl font-bold text-gray-800 mb-6">Track Parcel</h1>
+      <h1 className="text-2xl font-bold text-gray-800 mb-6">Track Parcel (Admin)</h1>
+      
+      <div className="bg-blue-50 border border-blue-200 text-blue-800 rounded-lg p-4 mb-6 text-sm">
+        <p><strong className="font-semibold">Customer Tracking:</strong> You can share a public tracking link with your customers. Tell them to visit <a href="/track" target="_blank" rel="noopener noreferrer" className="font-bold underline hover:text-blue-600">{window.location.origin}/track</a> and enter their tracking number.</p>
+      </div>
+
       <div className="bg-white rounded-xl border border-gray-200/80 shadow-sm p-6 max-w-2xl mb-8">
         <form onSubmit={handleTrack} className="flex items-center gap-4">
           <input
